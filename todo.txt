@@ -1,0 +1,13 @@
+New base: jupyter/datascience-notebook
+   One that contains JupyterLab > 1.0.1
+
+
+Python packages:
+- MetPy
+
+
+
+System packages:
+- tsc?  [npm]
+
+
