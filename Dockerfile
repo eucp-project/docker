@@ -66,6 +66,9 @@ RUN conda install --quiet --yes --channel esmvalgroup --channel conda-forge --ch
     'cdo' \
     'nco' \
 	'pcraster' \
+	'rasterio' \
+	'zarr' \
+	'imod' \
     'cdms2' \
     'eofs' \
     'esmpy' \
