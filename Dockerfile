@@ -41,19 +41,6 @@ RUN mkdir -p $PCRASTER_DIR \
  && fix-permissions $PCRASTER_DIR
 
 
-RUN cd /tmp \
- && curl -O http://pcraster.geo.uu.nl/pcraster/4.2.1/pcraster-4.2.1.tar.bz2 \
- && tar -jxvf pcraster-4.2.1.tar.bz2 \
- && cd pcraster-4.2.1 \
- && mkdir build \
- && cd build \
- && PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
- && cmake -Wno-dev -DPYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3 -DFERN_BUILD_ALGORITHM:BOOL=TRUE  -DCMAKE_INSTALL_PREFIX:PATH=$PCRASTER_DIR .. \
- && cmake --build . \
- && make install
-RUN rm -r /tmp/pcraster*
-
-
 USER $NB_UID
 
 # Notes:
@@ -78,6 +65,7 @@ RUN conda install --quiet --yes --channel esmvalgroup --channel conda-forge --ch
     'gdal' \
     'cdo' \
     'nco' \
+	'pcraster' \
     'cdms2' \
     'eofs' \
     'esmpy' \
