@@ -75,6 +75,7 @@ RUN conda install --quiet --yes --channel esmvalgroup --channel conda-forge --ch
 #    'esmvalcore' \
     'cmor' \
     'python=3.7' \
+    'r-formatr' \
  && conda clean --all -f -y \
  && fix-permissions $CONDA_DIR \
  && fix-permissions /home/$NB_USER
@@ -92,13 +93,21 @@ RUN pip install \
   cf-plot==3.0.5 \
   cfunits==3.1.1 \
   MetPy==0.11.1 \
-  flake8
+  flake8 \
+  black \
+  yapf \
+  autopep8 \
+  isort \
+  flake8-nb \
+  jupyterlab_code_formatter==1.1.0
 
 
 RUN pip install jupyterlab_thredds
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
 RUN jupyter labextension install jupyter-leaflet
 RUN jupyter labextension install jupyterlab-flake8
+RUN jupyter labextension install @ryantam626/jupyterlab_code_formatter@1.1.0
+RUN jupyter serverextension enable --py jupyterlab_code_formatter
 #RUN jupyter labextension install @ewatercycle/jupyterlab_thredds
 
 
