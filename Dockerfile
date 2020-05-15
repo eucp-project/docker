@@ -91,12 +91,14 @@ RUN pip install \
   cf-python==3.0.1 \
   cf-plot==3.0.5 \
   cfunits==3.1.1 \
-  MetPy==0.11.1
+  MetPy==0.11.1 \
+  flake8
 
 
 RUN pip install jupyterlab_thredds
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
 RUN jupyter labextension install jupyter-leaflet
+RUN jupyter labextension install jupyterlab-flake8
 #RUN jupyter labextension install @ewatercycle/jupyterlab_thredds
 
 
