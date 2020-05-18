@@ -1,5 +1,5 @@
 # EUCP Jupyterlab environment specification
-Dockerfile for the EUCP project - based on the Jupyter datascience notebook
+Dockerfile for the EUCP project - based on the Jupyter datascience notebook\
 [View on dockerhub](https://hub.docker.com/repository/docker/eucp/notebook/general)
 
 ## Branches
