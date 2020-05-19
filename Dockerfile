@@ -49,32 +49,32 @@ USER $NB_UID
 # - Downgrade Matplotlib to 2.2 for Iris
 # - pyngl and pynio have incompatible dependencies with some other packages
 RUN conda install --quiet --yes --channel esmvalgroup --channel conda-forge --channel pcmdi/label/nightly --override-channels \
-    'ipyleaflet' \
-    'ipywidgets' \
-    'iris' \
-    'iris-sample-data' \
-    'cftime' \
-    'nc-time-axis' \
-    'h5py' \
-    'netcdf4' \
-    'pyproj' \
-    'cartopy' \
-    'dask' \
-    'xarray' \
-    'boost' \
-    'gdal' \
-    'cdo' \
-    'nco' \
-	'pcraster' \
-	'rasterio' \
-	'zarr' \
-	'imod' \
-    'cdms2' \
-    'eofs' \
-    'esmpy' \
+    'python=3.7.6' \
+    'boost=1.72.0'\
+    'cartopy=0.17.0' \
+    'cdms2=3.1.3' \
+    # 'cdo=1.5.3' \
+    'cftime=1.1.1.2' \
+    'cmor=2019.05.16.master.numpy' \
+    'dask=2.2.0' \
+    'eofs=1.4.0' \
+    'esmpy=8.0.0' \
+    'gdal=3.0.4' \
+    'h5py=2.10.0' \
+    'imod=0.9.0' \
+    'ipyleaflet=0.12.4' \
+    'ipywidgets=7.5.1' \
+    'iris=2.4.0' \
+    'iris-sample-data=2.2.0' \
+    'nc-time-axis=1.2.0' \
+    'nco=4.9.1' \
+    'netcdf4=1.5.3' \
+    'pcraster=4.3.0' \
+    'pyproj=2.6.0' \
+    'rasterio=1.1.3' \
+    'xarray=0.15.1' \
+    'zarr=2.4.0' \
 #    'esmvalcore' \
-    'cmor' \
-    'python=3.7' \
  && conda clean --all -f -y \
  && fix-permissions $CONDA_DIR \
  && fix-permissions /home/$NB_USER
