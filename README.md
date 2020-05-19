@@ -5,7 +5,7 @@ Dockerfile for the EUCP project - based on the Jupyter datascience notebook\
 ## Branches
 - master: for regular development and updates. Merging via approved pull requests. Linked to 'latest' tag on dockerhub.
 - stable: standard branch for jupyterhub deployment. Linked to the 'stable' tag on dockerhub.
-- feature branches: make a separate branch for each PR/feature that you want to add. 
+- feature branches: make a separate branch for each PR/feature that you want to add.
 
 ## Update process
 1. Checkout, build and run the docker image locally
@@ -16,7 +16,10 @@ Dockerfile for the EUCP project - based on the Jupyter datascience notebook\
 
 ## Changelog
 
-May 18, 2020: 
+May 19, 2020:
+- Pin versions to current environment configuration
+
+May 18, 2020:
 - Start changelog
 - Enable autobuild on dockerhub
 - Create master and stable branches
