@@ -14,7 +14,7 @@ authors:
     orcid: "https://orcid.org/0000-0002-5025-7862"
 cff-version: "1.1.0"
 date-released: 2020-05-20
-doi: "10.0000/FIXME"
+doi: "10.5281/zenodo.3835951"
 license: "Apache-2.0"
 message: "If you use this software, please cite it using these metadata."
 repository-code: "https://github.com/eucp-project/docker"
