@@ -1,0 +1,23 @@
+# YAML 1.2
+---
+abstract: "This software specifies the Jupyter Lab environment set up for the Horizon 2020 project \"European Climate Prediction\" (EUCP)."
+authors: 
+  -
+    affiliation: "Netherlands eScience Center"
+    family-names: Rol
+    given-names: Evert
+    orcid: "https://orcid.org/0000-0001-8357-4453"
+  -
+    affiliation: "Netherlands eScience Center"
+    family-names: Kalverla
+    given-names: Peter
+    orcid: "https://orcid.org/0000-0002-5025-7862"
+cff-version: "1.1.0"
+date-released: 2020-05-20
+doi: "10.0000/FIXME"
+license: "Apache-2.0"
+message: "If you use this software, please cite it using these metadata."
+repository-code: "https://github.com/eucp-project/docker"
+title: "Jupyter Lab environment for EUCP"
+version: "1.1.0"
+...

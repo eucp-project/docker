@@ -1,0 +1,19 @@
+{
+    "creators": [
+        {
+            "affiliation": "Netherlands eScience Center",
+            "name": "Rol, Evert",
+            "orcid": "0000-0001-8357-4453"
+        },
+        {
+            "affiliation": "Netherlands eScience Center",
+            "name": "Kalverla, Peter",
+            "orcid": "0000-0002-5025-7862"
+        }
+    ],
+    "description": "This software specifies the Jupyter Lab environment set up for the Horizon 2020 project \"European Climate Prediction\" (EUCP).",
+    "license": {
+        "id": "Apache-2.0"
+    },
+    "title": "Jupyter Lab environment for EUCP"
+}
