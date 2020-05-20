@@ -1,3 +1,9 @@
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/eucp-project/docker)
+[![DOI](https://zenodo.org/badge/234047969.svg)](https://zenodo.org/badge/latestdoi/234047969)
+![GitHub](https://img.shields.io/github/license/eucp-project/docker)
+![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/eucp/notebook)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/eucp/notebook)
+
 # EUCP Jupyterlab environment specification
 Dockerfile for the EUCP project - based on the Jupyter datascience notebook\
 [View on dockerhub](https://hub.docker.com/repository/docker/eucp/notebook/general)
