@@ -75,5 +75,7 @@ RUN jupyter labextension install jupyter-leaflet
 # This doesn't actually seem to work in the notebook, so I'm disabling it for now.
 # RUN pip install jupyterlab_thredds && jupyter labextension install @ewatercycle/jupyterlab_thredds
 
-# set path explicitly, because otherwise cfunits can't be imported
-ENV UDUNITS2_XML_PATH=/opt/conda/share/udunits/udunits2.xml
+# These paths are set in the conda 'base' env, but that isn't activated by default on a local build.
+# to test: import cfunits in notebook, esmvaltool -h in a shell.
+# ENV UDUNITS2_XML_PATH=/opt/conda/share/udunits/udunits2.xml
+# ENV PROJ_LIB=/opt/conda/share/proj
