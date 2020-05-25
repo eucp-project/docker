@@ -2,11 +2,7 @@
 
 FROM jupyter/datascience-notebook:3b1f4f5e6cc1
 
-
 LABEL maintainer="EUCP-NLESC <e.rol@esciencecenter.nl>"
-
-
-ENV PCRASTER_DIR=/usr/local/pcraster
 
 USER root
 
@@ -36,21 +32,14 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-RUN mkdir -p $PCRASTER_DIR \
- && chown $NB_UID $PCRASTER_DIR \
- && fix-permissions $PCRASTER_DIR
-
-
 USER $NB_UID
 
 # Notes:
 # - grads is not available under Conda
 # - installing ncl under Conda messes up the notebook; for example, the R kernel disappears from the menu
-# - Downgrade Matplotlib to 2.2 for Iris
 # - pyngl and pynio have incompatible dependencies with some other packages
+# - cfunits is not cf-units: cf(dm/-python/-lplot) uses cfunits, iris uses cf-units (imported as cf_units)
 
-
-# Note: cfunits is not cf-units: cf(dm/-python/-lplot) uses cfunits, iris uses cf-units (imported as cf_units)
 RUN conda install --quiet --yes --channel esmvalgroup --channel pcmdi/label/nightly --channel ncas \
     # Ensure backwards compatibility:
     'boost=1.72.0'\
@@ -85,9 +74,3 @@ RUN jupyter labextension install jupyter-leaflet
 # Try to enable thredds browser extension (see https://github.com/eWaterCycle/jupyterlab_thredds)
 # This doesn't actually seem to work in the notebook, so I'm disabling it for now.
 # RUN pip install jupyterlab_thredds && jupyter labextension install @ewatercycle/jupyterlab_thredds
-
-
-ENV PATH=${PATH}:${PCRASTER_DIR}/bin
-ENV PYTHONPATH=${PYTHONPATH}:${PCRASTER_DIR}/python
-# set path explicitly, because otherwise cfunits can't be imported
-ENV UDUNITS2_XML_PATH=/opt/conda/share/udunits/udunits2.xml
