@@ -9,6 +9,11 @@
             "affiliation": "Netherlands eScience Center",
             "name": "Kalverla, Peter",
             "orcid": "0000-0002-5025-7862"
+        },
+        {
+            "affiliation": "Netherlands eScience Center",
+            "name": "Camphuijsen, Jaro",
+            "orcid": "0000-0002-8928-7831"
         }
     ],
     "description": "This software specifies the Jupyter Lab environment set up for the Horizon 2020 project \"European Climate Prediction\" (EUCP).",
