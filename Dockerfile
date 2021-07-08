@@ -69,7 +69,19 @@ RUN conda install --quiet --yes --channel esmvalgroup --channel pcmdi/label/nigh
  && fix-permissions $CONDA_DIR \
  && fix-permissions /home/$NB_USER
 
+RUN pip install \
+  flake8 \
+  black \
+  yapf \
+  autopep8 \
+  isort \
+  flake8-nb \
+  jupyterlab_code_formatter==1.3.1
+
 RUN jupyter labextension install jupyter-leaflet
+RUN jupyter labextension install jupyterlab-flake8
+RUN jupyter labextension install @ryantam626/jupyterlab_code_formatter@1.3.1
+RUN jupyter serverextension enable --py jupyterlab_code_formatter
 
 # Try to enable thredds browser extension (see https://github.com/eWaterCycle/jupyterlab_thredds)
 # This doesn't actually seem to work in the notebook, so I'm disabling it for now.
